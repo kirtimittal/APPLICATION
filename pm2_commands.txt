@@ -1,0 +1,9 @@
+pm2 status
+
+pm2 start/stop/delete/reload service_name
+
+
+/home/ubuntu/logs/
+
+
+pm2 start server.js --name production/staging  --log /home/ubuntu/logs/combined.log --output /home/ubuntu/logs/output.log --error /home/ubuntu/logs/error.log --time
