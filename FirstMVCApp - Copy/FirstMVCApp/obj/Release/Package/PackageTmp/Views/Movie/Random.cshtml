@@ -1,0 +1,32 @@
+﻿@model FirstMVCApp.ViewModel.RandomMovieViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    var classname = Model.customers.Count > 0 ? "popular" : null;
+}
+<h2 class="@classname">@Model.movie.Name</h2>
+@{
+    if (Model.customers.Count == 0)
+    {
+        <p>no customer is available.</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var cust in Model.customers)
+            {
+                <li>@cust.name</li>
+            }
+
+        </ul>
+
+    }
+
+}
+
+
+
+
+
